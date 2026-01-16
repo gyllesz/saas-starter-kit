@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="max-w-2xl w-full border border-lime-500/30 backdrop-blur-2xl rounded-xl bg-gradient-to-br from-lime-700/10 via-lime-600/10 to-lime-500/10 px-4">
                 <div className="px-6 py-4 flex items-center justify-between">
                     <div className="text-black font-bold w-10 h-10 rounded-full bg-lime-400 flex items-center justify-center">
-                        LO
+                        GV
                     </div>
 
                     <div className="hidden md:flex text-sm text-white/80 space-x-4">
