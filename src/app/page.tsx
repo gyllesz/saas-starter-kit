@@ -5,7 +5,7 @@ export default async function Page() {
   const { isAuthenticated } = await auth()
   const isProUser = await checkProPlan();
 
-  if (!isProUser) return <h1>you don't have a pro plan</h1>
+  if (!isProUser) return <h1>x</h1>
 
   if (!isAuthenticated) {
     return <div>Sign in to view this page</div>
