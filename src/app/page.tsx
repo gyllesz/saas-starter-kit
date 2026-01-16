@@ -1,17 +1,18 @@
 import { auth, currentUser } from '@clerk/nextjs/server'
 
 export default async function Page() {
-  // Use `auth()` to access `isAuthenticated` - if false, the user is not signed in
   const { isAuthenticated } = await auth()
+  const { has } = await auth()
 
-  // Protect the route by checking if the user is signed in
+  const hasProPlan = has({plan:"pro_plan"})
+
+  if (!hasProPlan) return <h1>you don't have a pro plan</h1>
+
   if (!isAuthenticated) {
     return <div>Sign in to view this page</div>
   }
 
-  // Get the Backend User object when you need access to the user's information
   const user = await currentUser()
 
-  // Use `user` to render user details or create UI elements
   return <div>Welcome, {user.firstName}!</div>
 }
