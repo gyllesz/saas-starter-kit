@@ -70,10 +70,7 @@ export default function HowItWorks() {
                         >
                             {index < arr.length - 1 && (
                                 <motion.div
-                                    className="
-                                        hidden md:block absolute top-12 left-full w-full h-0.5 z-0 -translate-y-0.5
-                                        bg-gradient-to-r from-lime-400/30 to-transparent
-                                    "
+                                    className="hidden md:block absolute top-12 left-full w-full h-0.5 z-0 -translate-y-0.5 bg-gradient-to-r from-lime-400/30 to-transparent"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4 + index * 0.1, duration: 0.3}}
@@ -81,11 +78,7 @@ export default function HowItWorks() {
                             )}
                             
                             <div
-                                className="
-                                    relative backdrop-blur-xl bg-white/5 hover:bg-white/[0.02] border border-white/10 hover:border-lime-400/20
-                                    rounded-2xl p-8 h-full transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl
-                                    group-hover:shadow-lime-400/5 space-y-4
-                                "
+                                className="relative backdrop-blur-xl bg-white/5 hover:bg-white/[0.02] border border-white/10 hover:border-lime-400/20 rounded-2xl p-8 h-full transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-lime-400/5 space-y-4"
                             >
                                 <div className="flex items-center justify-between">
                                     <div className="w-14 h-14 border border-lime-400/30 rounded-2xl flex items-center justify-center">
