@@ -1,17 +1,11 @@
 import { auth, currentUser } from '@clerk/nextjs/server'
 import { checkProPlan } from '@/lib/subscription'
 
-export default async function Page() {
-  const { isAuthenticated } = await auth()
-  const isProUser = await checkProPlan();
+export default async function Home() {
+  return (
+    <div className="min-h-screen flex justify-center items-center">
+      <h1 className='text-5xl'>Landing Page</h1>
+    </div>
 
-  if (!isProUser) return <h1>x</h1>
-
-  if (!isAuthenticated) {
-    return <div>Sign in to view this page</div>
-  }
-
-  const user = await currentUser()
-
-  return <div>Welcome, {user.firstName}!</div>
+  )
 }
