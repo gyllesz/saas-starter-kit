@@ -6,7 +6,7 @@ export async function getUserPlan(): Promise<PlanType | null> {
     const { has } = await auth()
 
     if (typeof has === 'function') {
-        if (has({ plan: 'pro'})) return 'pro'
+        if (has({ plan: 'free_user'})) return 'pro'
         if (has({ plan: 'free_user'})) return 'free'
     }
 
